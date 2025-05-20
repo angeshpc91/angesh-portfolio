@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="container px-8 mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           <div className="md:w-1/2 space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-900">
               <span className="block font-semibold">
                 Angesh <span className="font-light">Chettiar</span>
               </span>
@@ -25,7 +25,7 @@ const Hero = () => {
                 Principal <span className="font-light">Lead</span>
               </span>
             </h1>
-            <p className="text-lg text-gray-700 dark:text-gray-300 max-w-lg">
+            <p className="text-lg text-gray-700 dark:text-gray-700 max-w-lg">
               A proven engineering leader with 11+ years of experience in
               building robust, scalable systems and driving product success
               across fintech, healthtech, and digital platforms.
