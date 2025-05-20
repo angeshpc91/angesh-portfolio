@@ -45,7 +45,7 @@ const Contact = () => {
       <div className="container px-8 mx-auto">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Contact Me
+            Contact <span className="font-light">Me</span>
           </h2>
           <div className="w-20 h-1.5 bg-brand-600 rounded mb-8"></div>
           <p className="max-w-3xl text-center text-gray-700 text-lg">

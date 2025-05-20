@@ -2,15 +2,26 @@ import { Button } from "@/components/ui/button";
 import { Linkedin, Mail, Phone, Github, Codepen } from "lucide-react";
 
 const Hero = () => {
+  // const handleDownload = () => {
+  //   const link = document.createElement("a");
+  //   link.href = angeshcPdf;
+  //   link.download = "Angesh_Chettiar.pdf";
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
+
   return (
     <section id="hero" className="relative py-20 overflow-hidden animated-bg">
       <div className="container px-8 mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           <div className="md:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white">
-              <span className="block">Angesh Chettiar</span>
-              <span className="block text-brand-600 dark:text-brand-400 mt-2">
-                Principal Lead
+              <span className="block font-semibold">
+                Angesh <span className="font-light">Chettiar</span>
+              </span>
+              <span className="block text-brand-600 dark:text-brand-400 mt-2 font-semibold">
+                Principal <span className="font-light">Lead</span>
               </span>
             </h1>
             <p className="text-lg text-gray-700 dark:text-gray-300 max-w-lg">

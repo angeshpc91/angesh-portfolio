@@ -84,7 +84,7 @@ const Experience = () => {
       <div className="container px-8 mx-auto">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Work Experience
+            Work <span className="font-light">Experience</span>
           </h2>
           <div className="w-20 h-1.5 bg-brand-600 rounded mb-8"></div>
           <p className="max-w-3xl text-center text-gray-700 text-lg">
@@ -94,8 +94,8 @@ const Experience = () => {
         </div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-0.5 bg-gray-200 -translate-x-1/2"></div>
+          {/* Timeline line   */}
+          <div className="hidden md:block absolute top-0 bottom-0  bg-gray-200 left-1/2 w-0.5 -translate-x-1/2"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -107,18 +107,20 @@ const Experience = () => {
                 }
               } */
               <div key={index} className={`relative`}>
-                {/* Timeline dot */}
-                <div className="hidden md:block absolute top-6 left-1/2 w-4 h-4 rounded-full bg-brand-600 border-4 border-white transform -translate-x-1/2"></div>
+                {/* Timeline dot  */}
+                <div className="hidden md:block absolute top-6 w-4 h-4 rounded-full bg-brand-600 border-4 border-white left-1/2  transform -translate-x-1/2 "></div>
 
                 {/* TODO: some logic  ${
+                
                   index % 2 === 0
                     ? "md:ml-1/2"
                     : "md:mr-1/2 md:flex md:justify-end"
-                } */}
-                <Card
-                  className={`border-2 border-gray-100 shadow-sm hover:shadow-md transition-shadow md:w-[calc(100%-20px)] ${
+                } 
+                 ${
                     index % 2 === 0 ? "md:ml-10" : "md:mr-10"
-                  }`}
+                  }*/}
+                <Card
+                  className={`border-2 border-gray-100 shadow-sm hover:shadow-md transition-shadow md:w-[calc(100%-20px)] `}
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-4">

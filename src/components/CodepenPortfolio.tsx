@@ -1,6 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
+import LoadingPNG from "./assets/Loading_Screenshot.png";
+import CarouselPNG from "./assets/Carousel_Screenshot.png";
+import ParticlesPNG from "./assets/Particles_Screenshot.png";
+import { Codepen } from "lucide-react";
 
 interface CodepenItem {
   title: string;
@@ -15,24 +19,21 @@ const CodepenPortfolio = () => {
     {
       title: "Particles Background Animation",
       url: "https://codepen.io/angeshpc91/pen/KwKrdYQ",
-      thumbnail:
-        "https://assets.codepen.io/1161929/internal/screenshots/pens/KwKrdYQ.default.png",
+      thumbnail: ParticlesPNG,
       description:
         "Interactive particle animation with hover effects using Particles.js",
     },
     {
-      title: "Carousel Animation",
-      url: "https://codepen.io/angeshpc91/pen/oNMWgXv",
-      thumbnail:
-        "https://assets.codepen.io/1161929/internal/screenshots/pens/oNMWgXv.default.png",
-      description: "Smooth carousel animation with CSS transitions",
+      title: "Carousel in Vanila JS",
+      url: "https://codepen.io/angeshpc91/pen/WNgbKQJ",
+      thumbnail: CarouselPNG,
+      description: "Smooth carousel animation with vanila JS",
     },
     {
-      title: "Flutter App UI",
-      url: "https://codepen.io/angeshpc91/pen/WNBXRZZ",
-      thumbnail:
-        "https://assets.codepen.io/1161929/internal/screenshots/pens/WNBXRZZ.default.png",
-      description: "Flutter-inspired UI components with animations",
+      title: "Loading Animation",
+      url: "https://codepen.io/angeshpc91/pen/gOpxyva",
+      thumbnail: LoadingPNG,
+      description: "Infinite Smooth loading animation using CSS transitions",
     },
   ]);
 
@@ -44,7 +45,7 @@ const CodepenPortfolio = () => {
       <div className="container px-8 mx-auto">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            CodePen Portfolio
+            CodePen <span className="font-light">Portfolio</span>
           </h2>
           <div className="w-20 h-1.5 bg-brand-600 rounded mb-8"></div>
           <p className="max-w-3xl text-center text-gray-700 dark:text-gray-300 text-lg">
@@ -97,19 +98,7 @@ const CodepenPortfolio = () => {
             className="inline-flex items-center gap-2 px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-md transition-colors"
           >
             <span>View all my CodePens</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm-3.5 8.5l3.5 3.5-3.5 3.5 1.5 1.5 4.5-4.5-4.5-4.5-1.5 1.5zm-1-4h8v2h-8v-2z" />
-            </svg>
+            <Codepen />
           </a>
         </div>
       </div>
