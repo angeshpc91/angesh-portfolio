@@ -65,7 +65,7 @@ const Navbar = () => {
               >
                 <span className="relative inline-block">
                   <Monitor className="w-6 h-6 text-brand-600 dark:text-brand-400" />
-                  <Globe className="w-3 h-3 text-blue-500 absolute bottom-0 right-0 bg-white dark:bg-gray-900 rounded-full p-0.5" />
+                  <Globe className="w-3 h-3 text-blue-600 dark:text-brand-400 absolute bottom-0 right-0 bg-white dark:bg-gray-900 rounded-full p-0.5" />
                 </span>
               </a>
             </div>
