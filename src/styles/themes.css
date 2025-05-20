@@ -1,0 +1,167 @@
+
+/* Base theme variables (Blue - Default) */
+:root {
+  --brand-50: #f0f9ff;
+  --brand-100: #e0f2fe;
+  --brand-200: #bae6fd;
+  --brand-300: #7dd3fc;
+  --brand-400: #38bdf8;
+  --brand-500: #0ea5e9;
+  --brand-600: #0284c7;
+  --brand-700: #0369a1;
+  --brand-800: #075985;
+  --brand-900: #0c4a6e;
+}
+
+/* Purple Theme */
+.theme-purple {
+  --brand-50: #f5f3ff;
+  --brand-100: #ede9fe;
+  --brand-200: #ddd6fe;
+  --brand-300: #c4b5fd;
+  --brand-400: #a78bfa;
+  --brand-500: #8b5cf6;
+  --brand-600: #7c3aed;
+  --brand-700: #6d28d9;
+  --brand-800: #5b21b6;
+  --brand-900: #4c1d95;
+}
+
+/* Green Theme */
+.theme-green {
+  --brand-50: #f0fdf4;
+  --brand-100: #dcfce7;
+  --brand-200: #bbf7d0;
+  --brand-300: #86efac;
+  --brand-400: #4ade80;
+  --brand-500: #22c55e;
+  --brand-600: #16a34a;
+  --brand-700: #15803d;
+  --brand-800: #166534;
+  --brand-900: #14532d;
+}
+
+/* Orange Theme */
+.theme-orange {
+  --brand-50: #fff7ed;
+  --brand-100: #ffedd5;
+  --brand-200: #fed7aa;
+  --brand-300: #fdba74;
+  --brand-400: #fb923c;
+  --brand-500: #f97316;
+  --brand-600: #ea580c;
+  --brand-700: #c2410c;
+  --brand-800: #9a3412;
+  --brand-900: #7c2d12;
+}
+
+/* Dark Mode Overrides */
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+/* Custom Animated Background */
+.animated-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(125deg, #00103a, #004e92);
+}
+
+.animated-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc6633' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa5522' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23cc6633' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23aa5522' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23cd6939' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23aa5320' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23ce6c3e' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23a9521e' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23cf6f43' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23a8501d' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23d07249' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23a74e1b' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  opacity: 0.3;
+  background-size: cover;
+  animation: move-bg 20s linear infinite;
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Add particleJs container styles */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Dark Theme Improvements */
+.dark .bg-white {
+  background-color: #1A1F2C;
+}
+
+.dark .bg-gray-50,
+.dark .bg-gray-100 {
+  background-color: #222;
+}
+
+.dark .text-gray-700,
+.dark .text-gray-900 {
+  color: #fff;
+}
+
+.dark .border-gray-200,
+.dark .border-gray-100 {
+  border-color: #2a2a2a;
+}
+
+.dark .bg-gradient-to-br.from-blue-50.to-sky-100 {
+  background: linear-gradient(to bottom right, #1A1F2C, #2a3242);
+}
+
+.dark .shadow-xl,
+.dark .shadow-md,
+.dark .shadow-sm {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+}
