@@ -1,15 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Linkedin, Mail, Phone, Github, Codepen } from "lucide-react";
+import angeshcPdf from "./assets/Angesh_Chettiar.pdf";
 
 const Hero = () => {
-  // const handleDownload = () => {
-  //   const link = document.createElement("a");
-  //   link.href = angeshcPdf;
-  //   link.download = "Angesh_Chettiar.pdf";
-  //   document.body.appendChild(link);
-  //   link.click();
-  //   document.body.removeChild(link);
-  // };
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = angeshcPdf;
+    link.download = "Angesh_Chettiar.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section id="hero" className="relative py-20 overflow-hidden animated-bg">
@@ -30,13 +31,17 @@ const Hero = () => {
               across fintech, healthtech, and digital platforms.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button className="flex items-center gap-2 bg-brand-600 hover:bg-brand-700 dark:bg-brand-500 dark:hover:bg-brand-600">
+              <Button
+                className="flex items-center gap-2 bg-brand-600 hover:bg-brand-700 dark:bg-brand-500 dark:hover:bg-brand-600"
+                onClick={() => (window.location.href = "#contact")}
+              >
                 <Mail size={18} />
                 Contact Me
               </Button>
               <Button
                 variant="outline"
                 className="flex items-center gap-2 border-brand-600 text-brand-600 hover:bg-brand-50 dark:border-brand-400 dark:text-brand-400 dark:hover:bg-gray-800"
+                onClick={handleDownload}
               >
                 Download CV
               </Button>
