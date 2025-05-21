@@ -218,7 +218,7 @@ const Contact = () => {
                       id="subject"
                       name="subject"
                       type="text"
-                      value={formData.email}
+                      value={formData.subject}
                       onChange={handleChange}
                       placeholder="Enter your subject"
                       required
