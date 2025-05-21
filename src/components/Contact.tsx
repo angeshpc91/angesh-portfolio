@@ -14,6 +14,7 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    subject: "",
     time: new Date().toLocaleString(),
     from_website: "From: angeshc.netlify.app",
   });
@@ -48,6 +49,7 @@ const Contact = () => {
             name: "",
             email: "",
             message: "",
+            subject: "",
             time: new Date().toLocaleString(),
             from_website: "From: angeshc.netlify.app",
           });
@@ -204,6 +206,24 @@ const Contact = () => {
                         className="border-gray-300 focus:border-brand-500 focus:ring-brand-500"
                       />
                     </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="subject"
+                      className="text-sm font-medium text-gray-700"
+                    >
+                      Subject
+                    </label>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      type="text"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Enter your subject"
+                      required
+                      className="border-gray-300 focus:border-brand-500 focus:ring-brand-500"
+                    />
                   </div>
                   <div className="space-y-2">
                     <label
