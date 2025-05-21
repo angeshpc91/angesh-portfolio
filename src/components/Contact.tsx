@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -13,6 +14,8 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    time: new Date().toLocaleString(),
+    from_website: "From: angeshc.netlify.app",
   });
 
   const handleChange = (
@@ -28,16 +31,36 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description:
-          "Thank you for contacting me. I will get back to you soon.",
-      });
-      setFormData({ name: "", email: "", message: "" });
-      setIsSubmitting(false);
-    }, 1000);
+    const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const EMAILJS_USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
+
+    emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData, EMAILJS_USER_ID)
+      .then(
+        () => {
+          toast({
+            title: "Message sent!",
+            description:
+              "Thank you for contacting me. I will get back to you soon.",
+          });
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+            time: new Date().toLocaleString(),
+            from_website: "From: angeshc.netlify.app",
+          });
+          setIsSubmitting(false);
+        },
+        (error) => {
+          toast({
+            title: "Error",
+            description: "Failed to send message. Please try again later.",
+          });
+          setIsSubmitting(false);
+        }
+      );
   };
 
   return (
