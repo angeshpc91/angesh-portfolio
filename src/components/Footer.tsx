@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-bold mb-4">Angesh Chettiar</h2>
             <p className="text-gray-300 mb-6 max-w-md">
-              Principal Lead with 11+ years of experience in JavaScript,
+              Principal Engineer with 11+ years of experience in JavaScript,
               TypeScript, React and modern web technologies.
             </p>
             <div className="flex items-center gap-4">

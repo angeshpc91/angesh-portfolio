@@ -10,10 +10,10 @@ const About = () => {
           </h2>
           <div className="w-20 h-1.5 bg-brand-600 rounded mb-8"></div>
           <p className="max-w-3xl text-center text-gray-700 text-lg">
-            As a Principal Lead, I've led cross-functional teams at Freecharge
-            (AXIS Bank), Tata Digital, and now Unico Connect, delivering
-            high-impact solutions using React, TypeScript, Node.js, and modern
-            frameworks like Next.js.
+            As a Principal Engineer, I've led cross-functional teams at
+            Freecharge (AXIS Bank), Tata Digital, and now Unico Connect,
+            delivering high-impact solutions using React, TypeScript, Node.js,
+            and modern frameworks like Next.js.
           </p>
         </div>
 

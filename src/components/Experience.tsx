@@ -6,7 +6,7 @@ const Experience = () => {
     {
       company: "Unico Connect",
       location: "Mumbai",
-      position: "Principal Lead",
+      position: "Principal Engineer",
       period: "February 2025 — Current",
       responsibilities: [
         "Led a high-performing development team of 12 developers using JavaScript, React, Node, and CSS3 to deliver scalable, maintainable applications that met client specifications and deadlines.",
@@ -22,7 +22,7 @@ const Experience = () => {
       position: "Senior Software Engineer",
       period: "June 2024 — February 2025",
       responsibilities: [
-        "Implemented FHIR standards and GraphQL in healthcare applications using React and Next.js to ensure interoperability, data consistency, and modern API integration.",
+        "Implemented FHIR standards and GraphQL in healthcare applications using TypeScript, React and Next.js to ensure interoperability, data consistency, and modern API integration, also incorporated RBAC (Role Based Access Control) from scratch.",
         "Developed reusable UI components and led a team of 5 developers with a focus on analytics features and maintaining architectural integrity to enhance code reusability, performance, and project scalability.",
       ],
     },
